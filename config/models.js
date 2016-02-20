@@ -19,7 +19,7 @@ module.exports.models = {
    ***************************************************************************/
   connection: 'mongo',
   autoCreatedAt: false,
-  autoUpdatedAt: false
+  autoUpdatedAt: false,
 
   /***************************************************************************
    *                                                                          *
@@ -29,6 +29,6 @@ module.exports.models = {
    * See http://sailsjs.org/#!/documentation/concepts/ORM/model-settings.html  *
    *                                                                          *
    ***************************************************************************/
-  // migrate: 'alter'
+   migrate: 'safe'
 
 };

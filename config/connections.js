@@ -57,13 +57,13 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
   mongo: {
-    adapter: 'sails-mongo',
-    host: 'apollo.modulusmongo.net',
-    port: 27017,
-    user: 'yoga',
-    password: 'yakult1234',
-    database: 'ydusI6jy'
-    //url: process.env.DB_URL
+    //adapter: 'sails-mongo',
+    //host: 'apollo.modulusmongo.net',
+    //port: 27017,
+    //user: 'yoga',
+    //password: 'yakult1234',
+    //database: 'ydusI6jy'
+    url: process.env.DB_URL
   }
 
   /***************************************************************************
