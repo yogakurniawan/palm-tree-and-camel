@@ -63,7 +63,7 @@ module.exports.connections = {
     //user: 'yoga',
     //password: 'yakult1234',
     //database: 'ydusI6jy'
-    url: process.ENV.DB_URL
+    url: process.env.DB_URL
   }
 
   /***************************************************************************
