@@ -57,7 +57,7 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
   mongo: {
-    //adapter: 'sails-mongo',
+    adapter: 'sails-mongo',
     //host: 'apollo.modulusmongo.net',
     //port: 27017,
     //user: 'yoga',
