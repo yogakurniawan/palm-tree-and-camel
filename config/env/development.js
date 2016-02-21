@@ -19,8 +19,8 @@ module.exports = {
 
   //models: {
   //  connection: 'mongo'
-  //}
+  //},
 
-  port: 80
+  port: 1336
 
 };

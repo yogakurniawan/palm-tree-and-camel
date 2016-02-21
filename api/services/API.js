@@ -87,25 +87,18 @@ Model = function (model) {
 };
 
 Model.prototype = {
-
   create: function (attributes) {
     return promisify(this.model.create)(attributes);
   },
-
   findOne: function (criteria) {
     return promisify(this.model.findOne)(criteria);
   },
-
   findOrCreate: function (criteria, attributes) {
     return promisify(this.model.findOrCreate)(criteria, attributes);
   },
-
-
   update: function (criteria, attributes) {
     return promisify(this.model.update)(criteria, attributes);
   },
-
-
   destroy: function (criteria) {
     return promisify(this.model.destroy)(criteria);
   }
@@ -113,7 +106,6 @@ Model.prototype = {
 
 API = function (action, req, res) {
   var data, context;
-
   //Validate Arguments
   if (!res || !req || !action) {
     throw {
