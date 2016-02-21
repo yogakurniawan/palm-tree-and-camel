@@ -13,6 +13,6 @@ module.exports.security = {
     }
   },
   server: {
-    url: 'http://localhost:1336'
+    url: process.env.HOST_URL || 'http://localhost:1336'
   }
 };

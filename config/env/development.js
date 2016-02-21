@@ -19,7 +19,8 @@ module.exports = {
 
   //models: {
   //  connection: 'mongo'
-  //},
-  //MONGOLAB_URI: 'mongodb://yoga:Save4@ring@apollo.modulusmongo.net:27017/sozos8eQ'
+  //}
+
+  port: 80
 
 };

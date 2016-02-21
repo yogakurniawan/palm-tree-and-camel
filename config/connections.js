@@ -63,7 +63,7 @@ module.exports.connections = {
     //user: 'yoga',
     //password: 'yakult1234',
     //database: 'ydusI6jy'
-    url: process.env.DB_URL
+    url: process.env.DB_URL || "mongodb://yoga:yakult1234@apollo.modulusmongo.net:27017/ydusI6jy"
   }
 
   /***************************************************************************

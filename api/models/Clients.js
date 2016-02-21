@@ -53,7 +53,7 @@ module.exports = {
       next(null, client);
     }
   },
-  beforeUpdate: function () {
+  beforeUpdate: function (client, next) {
     if (client.hasOwnProperty('client_secret')) {
       client.client_secret = bcrypt.hashSync(client.client_secret, bcrypt.genSaltSync(10));
       next(false, client);
