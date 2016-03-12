@@ -64,6 +64,13 @@ module.exports.connections = {
     //password: 'yakult1234',
     //database: 'ydusI6jy'
     url: process.env.DB_URL || "mongodb://yoga:yakult1234@apollo.modulusmongo.net:27017/ydusI6jy"
+  },
+
+  mongolocal: {
+    adapter: 'sails-mongo',
+    host: 'localhost',
+    port: 27017,
+    database: 'sails'
   }
 
   /***************************************************************************

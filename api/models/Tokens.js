@@ -6,7 +6,6 @@
  */
 
 var Promise = require('bluebird'),
-  promisify = Promise.promisify,
   randToken = require('rand-token');
 module.exports = {
   attributes: {

@@ -6,13 +6,14 @@ var promisify = require('bluebird').promisify,
   oauth2orize = require('oauth2orize'),
 
   PublicClientPasswordStrategy = require('passport-oauth2-public-client').Strategy,
+  ClientPasswordStrategy  = require('passport-oauth2-client-password').Strategy,
   BearerStrategy = require('passport-http-bearer').Strategy,
 
   server = oauth2orize.createServer(), // create OAuth 2.0 server service
   validateAndSendToken = promisify(server.token()),
   tokenErrorMessage = server.errorHandler(),
 
-//Handlers
+  //Handlers
   publicClientVerifyHandler,
   bearerVerifyHandler,
   exchangePasswordHandler,
@@ -103,6 +104,7 @@ exchangeRefreshTokenHandler = function (client, refreshToken, scope, done) {
 };
 
 //Initialize Passport Strategies
+passport.use(new PublicClientPasswordStrategy(publicClientVerifyHandler));
 passport.use(new PublicClientPasswordStrategy(publicClientVerifyHandler));
 passport.use(new BearerStrategy(bearerVerifyHandler));
 server.exchange(oauth2orize.exchange.password(exchangePasswordHandler));
