@@ -21,6 +21,10 @@ module.exports = {
     connection: 'mongolocal'
   },
 
-  port: 1336
+  port: 1336,
+
+  log: {
+    level: "verbose"
+  }
 
 };

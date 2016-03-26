@@ -11,6 +11,7 @@
     "nodemailer": "^2.1.0",
     "oauth2orize": "^1.2.2",
     "passport": "^0.3.2",
+    "passport-http": "0.2.x",
     "passport-local": "0.1.x",
     "passport-http-bearer": "^1.0.1",
     "passport-oauth2-public-client": "^0.1.0",

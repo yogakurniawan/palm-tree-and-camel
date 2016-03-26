@@ -127,7 +127,6 @@ API = function (action, req, res) {
   context.authorization = req.authorization;
 
   data = req.params.all();
-
   return Promise.method(action)(data, context, req, res)
     .then(sendResult(req, res))
     .catch(sendError(req, res));

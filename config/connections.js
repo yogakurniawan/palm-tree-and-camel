@@ -56,15 +56,15 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  mongo: {
-    adapter: 'sails-mongo',
+  //mongo: {
+  //  adapter: 'sails-mongo',
     //host: 'apollo.modulusmongo.net',
     //port: 27017,
     //user: 'yoga',
     //password: 'yakult1234',
     //database: 'ydusI6jy'
-    url: process.env.DB_URL || "mongodb://yoga:yakult1234@apollo.modulusmongo.net:27017/ydusI6jy"
-  },
+    //url: process.env.DB_URL || "mongodb://yoga:yakult1234@apollo.modulusmongo.net:27017/ydusI6jy"
+  //},
 
   mongolocal: {
     adapter: 'sails-mongo',

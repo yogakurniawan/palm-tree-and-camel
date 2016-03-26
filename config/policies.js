@@ -28,8 +28,8 @@ module.exports.policies = {
 
   '*': 'OAuthValidateAccessToken',
   OAuthController: {
-    '*': 'OAuthValidateAccessToken',
-    token: 'OAuthPublicClient'
+    '*': true,
+    token: true
   },
   UsersController: {
     '*': 'OAuthValidateAccessToken',
