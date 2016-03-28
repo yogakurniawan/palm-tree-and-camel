@@ -1,7 +1,7 @@
 var Promise = require('bluebird'),
     promisify = Promise.promisify,
-    mailer = require('nodemailer');
-
+    mailer = require('nodemailer'),
+    validator = require("email-validator");
 
 var Module = {
     transporter: mailer.createTransport({
@@ -81,13 +81,17 @@ var Module = {
         }
     },
     registerUser: function(data) {
-        var date = new Date();
-        return API.Model(Users).create({
-            username: data.username,
-            email: data.email,
-            password: data.password,
-            date_registered: date
-        });
+        if (validator.validate(data.email)) {
+            var date = new Date();
+            return API.Model(Users).create({
+                username: data.username,
+                email: data.email,
+                password: data.password,
+                date_registered: date
+            });
+        } else {
+            return Promise.reject("invalid email");
+        }        
     },
     generateUserToken: function(context, user) {
         context.id = user.username;
@@ -167,8 +171,12 @@ module.exports = {
     },
     registerClient: function(data, context, req, res) {
         var registerClient = Module.registerClient.bind(null, data, context, req, res);
-        return Module.verifyClientEmailExist(data.email)
-            .then(registerClient);
+        if (validator.validate(data.email)) {
+            return Module.verifyClientEmailExist(data.email)
+                   .then(registerClient);
+        } else {
+            return Promise.reject("invalid email");
+        }        
     },
     verifyClient: function(data, context) {
         return Module.verifyClient(data)

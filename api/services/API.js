@@ -117,7 +117,6 @@ API = function (action, req, res) {
         response: (res && "OK") || "BAD"
       }
     };
-
   }
 
   context = req.context || {};

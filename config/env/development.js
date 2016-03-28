@@ -18,7 +18,7 @@ module.exports = {
    ***************************************************************************/
 
   models: {
-    connection: 'mongolocal'
+    connection: 'mongo'
   },
 
   port: 1336,

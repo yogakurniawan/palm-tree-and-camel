@@ -33,5 +33,8 @@
     "url": "git://github.com/anonymous node/sails user/alpha-server.git"
   },
   "author": "anonymous node/sails user",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "email-validator": "^1.0.4"
+  }
 }
