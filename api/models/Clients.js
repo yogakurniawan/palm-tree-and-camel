@@ -25,7 +25,8 @@ module.exports = {
       type: 'string'
     },
     trust_level: {
-      type: 'string'
+      type: 'string',
+      defaultsTo: false
     },
     redirect_uri: {
       type: 'string'
